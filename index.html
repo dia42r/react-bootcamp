@@ -15,23 +15,29 @@
         const name = "Abdoul"
         const handle = "@abddiarr"
 
-        const nameElement = React.createElement(
-            'h1', 
-            {class:'big-title'},
-            name
-        )
+        function nameComponent(props) {
 
-        const handleElement = React.createElement(
+            return React.createElement(
+            'h1', 
+            {className:'big-title'},
+            props.name
+        )
+        }
+        
+        function handleComponent(props) {
+            return React.createElement(
             'h3', 
             null,
-            handle
+            props.handle
         )
+
+        }
 
         const wrapperElement = React.createElement(
             'div',
             {id: "container"},
-            nameElement,
-            handleElement
+            React.createElement(nameComponent,{name: "Abdoul"}),
+            React.createElement(handleComponent, { handle: "@abddiarr"})
         )
 
         ReactDOM.render(
