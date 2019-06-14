@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <title>Exercice Day 1 </title>
+</head>
+<body>
+    <div id="app"></div>
+    
+</body>
+</html>
+
+
+
+<script>
+
+    const name = 'Tyler McGinnis';
+    const img = 'https://avatars0.githubusercontent.com/u/2933430?v=3&s=460';
+    const username = 'tylermcginnis'
+
+    console.log(React);
+
+const  Avatar = React.createElement(
+        'img',
+        {src: img}
+    )
+
+const Label = React.createElement(
+        'h1', 
+        null,
+        "Name : " +  name
+
+    )
+
+const  ScreenName = React.createElement(
+        'h3',
+        null,
+        "Username: " + username
+    )
+
+const  Badge = React.createElement(
+        'div',
+        null,
+        Avatar,
+        Label,
+        ScreenName
+
+    )
+
+
+ReactDOM.render(Badge,
+  document.getElementById('app')
+)
+
+</script>
